@@ -1,0 +1,148 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+#first-main{
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+#main{
+	width: 100vw;
+	height: 10vh;
+	background-color: darkgrey;
+	position: absolute;
+}
+.my-Name{
+	width: 20vw;
+	height: 6vh;
+	position: absolute;
+	left: 15%;
+	top: 20%;
+}
+.my-Name h2{
+	font-size: 35px;
+	color: white;
+	margin: 0px;
+	padding: 0px;
+}
+.nav-Bar{
+	width: 40vw;
+	height: 6vh;
+	position: absolute;
+	right: 10%;
+	top: 30%;
+}
+.linked{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	color: white;
+	font-size: 20px;
+}
+#sec-main img{
+	width: 100vw;
+	height: 90vh;
+}
+.textOnImage{
+	width: 30vw;
+	height: 40vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:flex-start;
+	position: absolute;
+	top: 15%;
+	gap: 50px;
+	left: 2%;
+}
+.textOnImage h2{
+	font-size: 30px;
+	font-weight: bold;
+}
+.textOnImage p{
+	font-size: 30px;
+	font-weight: bold;
+}
+.about-btn{
+	width: 30vw;
+	height: 5vh;
+	position: absolute;
+	left: 2%;
+	top: 60%;
+}
+.about-btn button{
+	width: 150px;
+	padding: 10px;
+	border: 2px solid white;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.my-image{
+	width: 40vw;
+	height: 60vh;
+	position: absolute;
+	top: 20%;
+	right: 2%;
+}
+.my-image img{
+	width: 400px !important;
+	height: 400px !important;
+	border: 2px solid white;
+	border-radius:150px;
+}
+#third-main{
+	width: 100vw;
+	height: 10vh;
+	background-color: darkgrey;
+}
+.My-Mail{
+	width: 30vw;
+	height: 5vh;
+	position: absolute;
+	bottom: 4%;
+	right: 35%;
+}
+.My-Mail a{
+	text-decoration: none;
+	font-size: 30px;
+	color: white;
+}
+#changeBlock{
+	position: absolute;
+	width: 40vw;
+	height: 60vh;
+	top: 30%;
+	right: 2%;
+	display: none;
+}
+#changeBlock h2{
+	font-size: 30px;
+	color: darkred;
+	font-weight: bold;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+#changeBlock img{
+	width: 80px !important;
+	height: 80px !important;
+	margin-top: 30px;
+	cursor: pointer;
+}
+#socialMedia{
+	position: absolute;
+	width: 30vw;
+	height: 10vh;
+	bottom: 20%;
+}
+#socialMedia img{
+	width: 40px;
+	height: 40px;
+	transform: 3s ease out;
+}
+#socialMedia img:hover{
+	transition: scale(1.1);
+}

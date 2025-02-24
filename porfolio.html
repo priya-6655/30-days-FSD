@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/686/686104.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="Portfolio.css">
+	<title>Porfolio</title>
+</head>
+<body>
+	<div id="first-main">
+	<div id="main">
+		<div class="my-Name">
+			<h2>Shanmuga priya</h2>
+		</div>
+		
+  		<div class="nav-Bar">
+    		<ul class="navbar-nav linked">
+      			<li class="nav-item">
+        			<a class="nav-link" href="#" id="returnPage">Home</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="#">Education</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="#">Skill</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="#">Experience</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="#">Contact</a>
+      			</li>
+    		</ul>
+		</div>
+	</div>
+
+	<div id="sec-main">
+		<img src="https://img.freepik.com/premium-vector/modern-simple-3d-black-yellow-orange-abstract-background-design-business-card-presentation-background-booklet-brochure-certificate-template-backdrop-banner_181182-31205.jpg" alt="" />
+		<div class="textOnImage">
+			<h2 id="c1">Hi there,</h2>
+			<h2 id="c2">This is <span>Shanmuga Priya</span></h2>
+			<p id="c3">Web Developer</p>
+		</div>
+		<div class="about-btn">
+			<button type="button" id="clickMe">About</button>
+		</div>
+		<div id="socialMedia">
+			<img src="https://static.vecteezy.com/system/resources/previews/018/930/483/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png" style="width:60px; height: 60px;">
+
+			<img src="https://static.vecteezy.com/system/resources/previews/023/986/521/non_2x/instagram-logo-instagram-logo-transparent-instagram-icon-transparent-free-free-png.png"style="width:50px; height: 50px;">
+
+			<img src="https://img.icons8.com/ios11/512/facebook-new.png"style="width:50px; height: 50px;">
+
+			<img src="https://cdn3d.iconscout.com/3d/free/thumb/free-twitter-x-3d-icon-download-in-png-blend-fbx-gltf-file-formats--logo-network-social-media-pack-logos-icons-8050016.png" style="width:56px;height: 56px;">
+		</div>
+		<div class="my-image">
+			<img src="C:\Users\Vigneshwaran\Downloads\IMG-20240807-WA0035.jpg"alt="mypic" id="picture">
+
+		</div>
+
+		<div id="changeBlock">
+				<h2>Pursuing in front end developer</h2>
+				<img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png"alt="html"/>
+				<img src="https://img.icons8.com/fluent/512/css3.png"alt="css"/>
+				<img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png"alt="js"/>
+				<img src="https://www.iconpacks.net/icons/3/free-bootstrap-logo-icon-5634-thumb.png" alt="bootstrap"/>
+				<img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="react"/>
+		</div>
+	</div>
+
+	<div id="third-main">
+		<div class="My-Mail">
+			<p><a href="mailto:priyapakthavachalam6655@gmail.com">priyapakthavachalam@gmail.com</a></p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	let a = "Web Developer";
+	let b = "Six Month experience in front end developer";
+	let c = "B.Sc (IT)";
+	document.getElementById("clickMe").onclick = function(){
+		document.getElementById('c1').innerHTML = a;
+		document.getElementById('c2').innerHTML = b;
+		document.getElementById('c3').innerHTML = c;
+		document.getElementById('changeBlock').style.display= "block";
+		document.getElementById('picture').style.display = "none";
+	}
+
+	let text1 = "Hi there,";
+	let text2 = "This is Shanmuga Priya";
+	let text3 = "Web Developer";
+
+	document.getElementById('returnPage').onclick = function(){
+		document.getElementById('c1').innerHTML = text1;
+		document.getElementById('c2').innerHTML = text2;
+		document.getElementById('c3').innerHTML = text3;
+		document.getElementById('changeBlock').style.display= "none";
+		document.getElementById('picture').style.display = "block";
+	}
+</script>
+</body>
+</html>

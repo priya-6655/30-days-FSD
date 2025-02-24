@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Translator</title>
+	<style type="text/css">
+		body{
+			display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: darkcyan;
+            margin: 0;
+            width: 100vw;
+		}
+		#main{
+			width: 50vw;
+			height: 60vh;
+            padding: 20px;
+            background-color: violet;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+		}
+		.div{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+		}
+		 .div label, .div input {
+            width: 80%;
+            text-align: left;
+        }
+        .div input {
+            padding: 8px;
+            font-size: 16px;
+        }
+		button{
+			width: 10vw;
+			padding: 6px;
+			background-color: red;
+			border: 2px solid black;
+			font-size: 20px;
+			color: white;
+			margin-top: 20px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		#translator{
+			 margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<h1>Login Form</h1>
+		<form class="div">
+			
+						<label for="name">Name</label>
+					
+						<input type="text" id="name" placeholder="Enter Your name">
+					
+						<label for="num">Number</label>
+					
+						<input type="number" id="num"placeholder="Enter Your Number"> 
+				
+						<label for="mail">Email</label>
+					
+						<input type="text" id="mail"placeholder="Enter Your mail">
+						
+						<button type="Submit">Submit</button>
+
+		</form>
+		<div id="translator">
+		
+	</div>
+	</div>
+
+	
+	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+	<script type="text/javascript">
+		function googleTranslateElementInit(){
+			new google.translate.TranslateElement({pageLanguage:'en'}, 'translator');
+		}
+	</script>
+</body>
+</html>

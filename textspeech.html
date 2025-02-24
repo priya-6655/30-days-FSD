@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Text To Speech</title>
+	<style type="text/css">
+		body{
+			width: 100vw;
+			height: 100vh;
+			background-color: blue;
+			position: relative;
+		}
+		.container{
+			width: 40vw;
+			height: 50vh;
+			background-color: brown;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			position: absolute;
+			left: 30%;
+			top: 20%;
+		}
+		textarea{
+			width: 300px;
+			height: 100px;
+			padding: 50px;
+		}
+		button{
+			width: 100px;
+			padding: 10px;
+			cursor: pointer;
+			background-color: beige;
+			font-size: 20px;
+			border: 2px solid black;
+			border-radius: 20px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Text to speak</h1>
+		<textarea id="convertAudio" placeholder="Enter Your text"></textarea>
+		<button onclick="speaktext()">Speak</button>
+	</div>
+	<script type="text/javascript">
+
+		var msg = new SpeechSynthesisUtterance();
+    
+		speechSynthesis.addEventListener("voiceschanged", () => {
+		var voices = window.speechSynthesis.getVoices();
+
+		msg.voice = voices[6];
+		msg.text = "Hello World!";
+		speechSynthesis.speak(msg);
+		});
+
+		var audio = new SpeechSynthesisUtterance();
+		var voices;
+		setTimeout(()=>{
+			voices = window.speechSynthesis.getVoices();
+			console.log(voices)
+		},500)
+        
+		
+		function speaktext(){
+			var convertTxt = document.getElementById('convertAudio').value;
+			if(convertTxt.trim()!== ""){
+				 window.speechSynthesis.cancel();
+				audio.text = convertTxt;
+				audio.lang = "hi-IN";
+				audio.rate = 0.8;
+				audio.volume = 1;
+				audio.pitch = 1;
+				audio.voice = voices[12];
+				window.speechSynthesis.speak(audio);
+			}
+			else{
+				alert("Please enter the text");
+			}
+			
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JsCode Learning</title>
+	<style type="text/css">
+		#text{
+			font-size: 35px;
+			color: firebrick;
+		}
+		#btn1{
+			width: 120px;
+			padding: 10px;
+			background-color: blue;
+			color: white;
+			font-size: 20px;
+			border: 2px solid black;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		#btn2{
+			width: 120px;
+			padding: 10px;
+			background-color: blue;
+			color: white;
+			font-size: 20px;
+			border: 2px solid black;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		#sec-js{
+			width: 50vw;
+			height: 100vh;
+			margin-top: 50px;
+			background-color: blue;
+			display: flex;
+			flex-direction: column;
+		}
+		#group1{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
+		#score1{
+			font-size: 30px;
+		}
+		#group2{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
+		#score2{
+			font-size: 30px;
+		}
+		#main-btn{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			gap: 50px;
+		}
+		#Sub1{
+			width: 150px;
+			padding: 10px;
+			cursor: pointer;
+		}
+		#Sub2{
+			width: 150px;
+			padding: 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h2 id="text"> is Java Script easy?</h2>
+		<button id="btn1">Yes</button>
+		<button id="btn2">No</button>
+		<script type="text/javascript">
+			let a = "Yes, JS is Easy";
+			let b = "No, If you not practice";
+			document.getElementById("btn1").onclick = function(){
+				document.getElementById("text").innerHTML = a;
+				
+			};
+			document.getElementById("btn2").onclick = function(){
+				document.getElementById("text").innerHTML = b;
+			};
+			console.log();
+		</script>
+	</div>
+
+	<div id="sec-js">
+		<div id="group1">
+			<h2 id="player1">Rohit</h2>
+			<p id="score1">0</p>
+		</div>
+
+		<div id="group2">
+			<h2 id="player2">Virat</h2>
+			<p id="score2">0</p>
+		</div>
+
+		<div id="main-btn">
+			<button type="button" id="Sub1">Rohit</button>
+			<button type="button" id="Sub2">Virat</button>
+		</div>
+		<script type="text/javascript">
+			let Sr1 = 0;
+			let Sr2 = 0;
+			let name1 = "Rohit";
+			let name2 = "Virat";
+			document.getElementById("Sub1").onclick = function(){
+				Sr1 = Sr1 + 1;
+				document.getElementById("score1").innerHTML =Sr1;
+				updateScore();
+			};
+			document.getElementById("Sub2").onclick = function(){
+				Sr2 = Sr2 + 1;
+				document.getElementById("score2").innerHTML =Sr2;
+				updateScore();
+			};
+			function updateScore(){
+				if (Sr2 > Sr1) {
+					document.getElementById('player1').innerHTML = name2;
+					document.getElementById('score1').innerHTML = Sr2;
+					document.getElementById('player2').innerHTML = name1;
+					document.getElementById('score2').innerHTML = Sr1;
+				}
+				else{
+					document.getElementById('player1').innerHTML = name1;
+					document.getElementById('score1').innerHTML = Sr1;
+					document.getElementById('player2').innerHTML = name2;
+					document.getElementById('score2').innerHTML = Sr2;
+				}
+			}
+
+		</script>
+	</div>
+</body>
+</html>
